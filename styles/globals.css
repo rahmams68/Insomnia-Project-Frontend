@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'IBM-Plex-Sans';
+  src: url('../public/fonts/IBMPlexSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'IBM-Plex-Bold';
+  src: url('../public/fonts/IBMPlexSans-Bold.ttf');
+}
+
+:root {
+  /* --main-green: rgb(70, 167, 138); */
+  --main-green: #61A995;
+  --light-green: rgb(246, 249, 247);
+  /* --shadow-green: #FFFFFF4D; */
+  --shadow-green: #4e8e7c;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'IBM-Plex-Sans';
+  background-color: var(--light-green);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  box-shadow: 0 0 5px gray;
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar .left {
+  display: flex;
+}
+
+.navbar .left h1 {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 0;
+  color: var(--main-green);
+  align-self: center;
+  margin-left: 24px;
+}
+
+.navbar .right {
+  margin-right: 24px;
+  align-self: center;
+}
+
+.navbar .right button {
+  background-color: var(--main-green);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  color: #FFFFFF;
+  font-family: 'IBM-Plex-Bold';
+  letter-spacing: 0.7px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.navbar .right button:hover {
+  background-color: var(--shadow-green);
+}
+
+.body {
+  display: flex;
+}
+
+.sidebar {
+  width: 290px;
+  height: calc(100vh - 85px);
+  padding-top: 15px;
+  background-color: #FFFFFF;
+  background: linear-gradient(
+    90deg,
+      var(--main-green) 0px,
+      var(--main-green) 70px,
+      #FFFFFF 70px
+  );
+  position: sticky;
+  top: 70px;
+}
+
+.sidebar .menu {
+  height: 70px;
+  display: flex;
+}
+
+.sidebar .menu img {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+}
+
+.sidebar .menu a {
+  align-self: center;
+  text-decoration: none;
+  color: #8A8A8A;
+  padding: 25px 0 25px 20px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  width: calc(100% - 70px);
+  font-family: 'IBM-Plex-Bold';
+  cursor: default;
+}
+
+.sidebar .menu a.change {
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.sidebar .menu a.change:hover {
+  background-color: #e6e9f5a4;
+  color: #434242;
+}
+
+.sidebar .subMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .subMenu a {
+  color: #8A8A8A;
+  text-decoration: none;
+  margin-left: 70px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 15px 0 15px 40px;
+  transition: 0.15s;
+}
+
+.sidebar .subMenu a:hover {
+  background-color: #e6e9f5a4;
+  color: #434242;
+}
+
+/* main {
+  width: calc(100% - 390px);
+  background-color: #FFFFFF;
+  margin: 50px;
+} */
