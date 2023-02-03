@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import FormValueIdentification from '../components/ValueIdentification'
 
 export default function Home() {
   return (
@@ -41,7 +42,9 @@ export default function Home() {
             </div>
         </nav>
 
-        <main></main>
+        <main>
+          <FormValueIdentification></FormValueIdentification>
+        </main>
       </div>
     </div>
   )
